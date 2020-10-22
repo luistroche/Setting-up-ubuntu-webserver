@@ -1,4 +1,4 @@
-\$\sSetting-up-ubuntu-webserver
+Setting-up-ubuntu-webserver
 Basic Steps to setup Ubuntu LEMP Webserver. 
 
 <!-- //setting strong root password -->
@@ -63,19 +63,22 @@ $ adduser NewUsername
 
 <!-- add user to sudoers -->
 
-adduser NewUsername sudo
+$ adduser NewUsername sudo
 
 <!-- add sshkey to webserver -->
 
-ssh-copy-id example_user@203.0.113.10
+$ ssh-copy-id example_user@203.0.113.10
 
 <!-- disable root login -->
 
-$ sudo nano /etc/sshd_config
-
+```bash
 <!-- PermitRootLogin no  -->
 <!-- PasswordAuthentication no  -->
 <!-- AddressFamily inet allows only ipv4 -->
+```
+$ sudo nano /etc/sshd_config
+
+
 
 
 <!-- restart sshd -->
