@@ -1,7 +1,7 @@
 Setting-up-ubuntu-webserver
 Basic Steps to setup Ubuntu LEMP Webserver. 
 
-# //setting strong root password 
+#setting strong root password 
 
 ```bash
 passwd root
