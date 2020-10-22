@@ -7,16 +7,16 @@ Basic Steps to setup Ubuntu LEMP Webserver.
 passwd root
 ```
 
-# add superstrongpassword. 
+[x]add superstrongpassword. 
 
 
-# update upgrade server 
+[x]update upgrade server 
 ```bash
 apt-get update && apt-get upgrade
 ```
 
 
-# set hostname: 
+[x]set hostname: 
 
 ```bash
 $ echo "example-hostname" > /etc/hostname
@@ -24,27 +24,27 @@ $ hostname -F /etc/hostname
 ```
 
 
-# //Edit /etc/hosts to add hostnames 
+[x]//Edit /etc/hosts to add hostnames 
 ```bash
 $ nano /etc/hosts
 ```
 
 
-# check timezone 
+[x]check timezone 
 
 ```bash
 $ timedatectl
 ```
 
 
-# check time 
+[x]check time 
 
 ```bash
  $ date
 ```
 
 
-# Set TimeZone 
+[x]Set TimeZone 
 
 ```bash
 $ dpkg-reconfigure tzdata
@@ -52,22 +52,22 @@ $ dpkg-reconfigure tzdata
 
 
 
-# add new user 
+[x]add new user 
 
 ```bash
 $ adduser NewUsername
 ```
 
-# add superstrongpassword 
+[x]add superstrongpassword 
 
 
-# add user to sudoers 
+[x]add user to sudoers 
 
 ```bash
 $ adduser NewUsername sudo
 ```
 
-# add sshkey to webserver 
+[x]add sshkey to webserver 
 
 
 ```bash
@@ -76,7 +76,7 @@ $ ssh-copy-id example_user@203.0.113.10
 ```
 
 
-# disable root login 
+[x]disable root login 
 
 ```bash
 
@@ -90,9 +90,9 @@ $ sudo nano /etc/sshd_config
 
 
 
-# restart sshd 
+[x]restart sshd 
 
-# Setting up firewall 
+[x]Setting up firewall 
 
 ```bash
 $ sudo ufw default allow outgoing
@@ -143,6 +143,6 @@ To                         Action      From
 
 ```
 
-# *****settup login******* 
+[x]*****settup login******* 
 
-# *****setup fail2ban***** 
+[x]*****setup fail2ban***** 
