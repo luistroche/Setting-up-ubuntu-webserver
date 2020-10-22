@@ -5,14 +5,14 @@ Basic Steps to setup Ubuntu LEMP Webserver.
 
 #passwd root
 
-add superstrongpassword.
+<!-- add superstrongpassword. -->
 
 
-update upgrade server
+<!-- update upgrade server -->
 
 #apt-get update && apt-get upgrade
 
-set hostname:
+<!-- set hostname: -->
 
 
 #echo "example-hostname" > /etc/hostname
