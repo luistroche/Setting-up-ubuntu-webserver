@@ -1,43 +1,64 @@
-# Setting-up-ubuntu-webserver
+\$\sSetting-up-ubuntu-webserver
 Basic Steps to setup Ubuntu LEMP Webserver. 
 
 <!-- //setting strong root password -->
 
-#passwd root
+```bash
+passwd root
+```
 
 <!-- add superstrongpassword. -->
 
 
 <!-- update upgrade server -->
+```bash
+apt-get update && apt-get upgrade
+```
 
-#apt-get update && apt-get upgrade
 
 <!-- set hostname: -->
 
+```bash
+$ echo "example-hostname" > /etc/hostname
+$ hostname -F /etc/hostname
+```
 
-#echo "example-hostname" > /etc/hostname
-#hostname -F /etc/hostname
 
 <!-- //Edit /etc/hosts to add hostnames -->
+```bash
+$ nano /etc/hosts
+```
 
-#nano /etc/hosts
 
 <!-- check timezone -->
 
-#timedatectl
+```bash
+$ timedatectl
+```
+
 
 <!-- check time -->
 
-#date
+```bash
+ $ date
+```
+
 
 <!-- Set TimeZone -->
 
-#dpkg-reconfigure tzdata
+```bash
+$ dpkg-reconfigure tzdata
+```
+
+
 
 <!-- add new user -->
 
-#adduser NewUsername
-add superstrongpassword
+```bash
+$ adduser NewUsername
+```
+
+<!-- add superstrongpassword -->
 
 
 <!-- add user to sudoers -->
@@ -50,7 +71,7 @@ ssh-copy-id example_user@203.0.113.10
 
 <!-- disable root login -->
 
-#sudo nano /etc/sshd_config
+$ sudo nano /etc/sshd_config
 
 <!-- PermitRootLogin no  -->
 <!-- PasswordAuthentication no  -->
