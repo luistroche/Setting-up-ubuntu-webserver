@@ -63,11 +63,18 @@ $ adduser NewUsername
 
 <!-- add user to sudoers -->
 
+```bash
 $ adduser NewUsername sudo
+```
 
 <!-- add sshkey to webserver -->
 
+
+```bash
 $ ssh-copy-id example_user@203.0.113.10
+
+```
+
 
 <!-- disable root login -->
 
