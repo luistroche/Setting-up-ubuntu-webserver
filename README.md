@@ -1,22 +1,22 @@
 Setting-up-ubuntu-webserver
 Basic Steps to setup Ubuntu LEMP Webserver. 
 
-<!-- //setting strong root password -->
+# //setting strong root password 
 
 ```bash
 passwd root
 ```
 
-<!-- add superstrongpassword. -->
+# add superstrongpassword. 
 
 
-<!-- update upgrade server -->
+# update upgrade server 
 ```bash
 apt-get update && apt-get upgrade
 ```
 
 
-<!-- set hostname: -->
+# set hostname: 
 
 ```bash
 $ echo "example-hostname" > /etc/hostname
@@ -24,27 +24,27 @@ $ hostname -F /etc/hostname
 ```
 
 
-<!-- //Edit /etc/hosts to add hostnames -->
+# //Edit /etc/hosts to add hostnames 
 ```bash
 $ nano /etc/hosts
 ```
 
 
-<!-- check timezone -->
+# check timezone 
 
 ```bash
 $ timedatectl
 ```
 
 
-<!-- check time -->
+# check time 
 
 ```bash
  $ date
 ```
 
 
-<!-- Set TimeZone -->
+# Set TimeZone 
 
 ```bash
 $ dpkg-reconfigure tzdata
@@ -52,22 +52,22 @@ $ dpkg-reconfigure tzdata
 
 
 
-<!-- add new user -->
+# add new user 
 
 ```bash
 $ adduser NewUsername
 ```
 
-<!-- add superstrongpassword -->
+# add superstrongpassword 
 
 
-<!-- add user to sudoers -->
+# add user to sudoers 
 
 ```bash
 $ adduser NewUsername sudo
 ```
 
-<!-- add sshkey to webserver -->
+# add sshkey to webserver 
 
 
 ```bash
@@ -76,23 +76,23 @@ $ ssh-copy-id example_user@203.0.113.10
 ```
 
 
-<!-- disable root login -->
+# disable root login 
 
 ```bash
 
 $ sudo nano /etc/sshd_config
-<!-- PermitRootLogin no  -->
-<!-- PasswordAuthentication no  -->
-<!-- AddressFamily inet allows only ipv4 -->
+--> PermitRootLogin no  
+--> PasswordAuthentication no  
+--> AddressFamily inet allows only ipv4 
 ```
 
 
 
 
 
-<!-- restart sshd -->
+# restart sshd 
 
-<!-- Setting up firewall -->
+# Setting up firewall 
 
 ```bash
 $ sudo ufw default allow outgoing
@@ -143,6 +143,6 @@ To                         Action      From
 
 ```
 
-<!-- *****settup login******* -->
+# *****settup login******* 
 
-<!-- *****setup fail2ban***** -->
+# *****setup fail2ban***** 
