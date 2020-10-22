@@ -7,7 +7,7 @@ Basic Steps to setup Ubuntu LEMP Webserver.
 passwd root
 ```
 
-[x]add superstrongpassword. 
+- [x]add superstrongpassword. 
 
 
 [x]update upgrade server 
