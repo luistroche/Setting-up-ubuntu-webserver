@@ -85,7 +85,7 @@ $ sudo ufw enable
 Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
 Firewall is active and enabled on system startup
 
-```sh
+```bash
 $ sudo ufw status
 Status: active
 
