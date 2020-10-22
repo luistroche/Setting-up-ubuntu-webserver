@@ -1,22 +1,22 @@
 Setting-up-ubuntu-webserver
 Basic Steps to setup Ubuntu LEMP Webserver. 
 
-#setting strong root password 
+- - [X]  setting strong root password 
 
 ```bash
 passwd root
 ```
 
-- [X] add superstrongpassword. 
+- [X]  add superstrongpassword. 
 
 
-[x]update upgrade server 
+- [X] update upgrade server 
 ```bash
 apt-get update && apt-get upgrade
 ```
 
 
-[x]set hostname: 
+- [X] set hostname: 
 
 ```bash
 $ echo "example-hostname" > /etc/hostname
@@ -24,27 +24,27 @@ $ hostname -F /etc/hostname
 ```
 
 
-[x]//Edit /etc/hosts to add hostnames 
+- [X] //Edit /etc/hosts to add hostnames 
 ```bash
 $ nano /etc/hosts
 ```
 
 
-[x]check timezone 
+- [X] check timezone 
 
 ```bash
 $ timedatectl
 ```
 
 
-[x]check time 
+- [X] check time 
 
 ```bash
  $ date
 ```
 
 
-[x]Set TimeZone 
+- [X] Set TimeZone 
 
 ```bash
 $ dpkg-reconfigure tzdata
@@ -52,22 +52,22 @@ $ dpkg-reconfigure tzdata
 
 
 
-[x]add new user 
+- [X] add new user 
 
 ```bash
 $ adduser NewUsername
 ```
 
-[x]add superstrongpassword 
+- [X] add superstrongpassword 
 
 
-[x]add user to sudoers 
+- [X] add user to sudoers 
 
 ```bash
 $ adduser NewUsername sudo
 ```
 
-[x]add sshkey to webserver 
+- [X] add sshkey to webserver 
 
 
 ```bash
@@ -76,7 +76,7 @@ $ ssh-copy-id example_user@203.0.113.10
 ```
 
 
-[x]disable root login 
+- [X] disable root login 
 
 ```bash
 
@@ -90,9 +90,9 @@ $ sudo nano /etc/sshd_config
 
 
 
-[x]restart sshd 
+- [X] restart sshd 
 
-[x]Setting up firewall 
+- [X] Setting up firewall 
 
 ```bash
 $ sudo ufw default allow outgoing
@@ -143,6 +143,6 @@ To                         Action      From
 
 ```
 
-[x]*****settup login******* 
+- [X] *****settup login******* 
 
-[x]*****setup fail2ban***** 
+- [X] *****setup fail2ban***** 
