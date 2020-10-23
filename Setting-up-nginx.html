@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up Nginx</title>
+</head>
+<body>
+<!-- Installing nginx -->
+
+$ sudo apt-get install nginx
+
+<!-- creating website root directory -->
+
+$ sudo mkdir /var/www/html/website-domain-name
+
+<!-- Setting up permissions -->
+
+
+$ sudo chown -R $USER:$USER /var/www/html/website-domain-name 
+$ nano /var/www/html/website-domain-name/index.html
+
+<!-- create configuracion for website on nginx  -->
+
+$ sudo nano /etc/nginx/sites-available/your_domain
+
+server {
+    listen 80;
+    server_name your_domain www.your_domain;
+    root /var/www/your_domain;
+
+    index index.html index.htm index.php;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+     }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+}
+
+<!-- IMPORTANT create link with full path -->
+<pre>sudo ln -s /etc/nginx/sites-available/cleanerlake.com /etc/nginx/sites-enabled/
+</pre>
+
+
+<!-- test configuration  -->
+
+$ sudo nginx -t
+
+<!-- restart webserver  -->
+
+
+$ sudo systemctl reload nginx
+
+    
+</body>
+</html>

@@ -143,6 +143,6 @@ To                         Action      From
 
 ```
 
-- [ ] **settup login******* 
+- [ ] **setup login******* 
 
 - [ ] **setup fail2ban***** 
