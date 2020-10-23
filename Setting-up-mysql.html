@@ -69,5 +69,15 @@ All done!
 $ sudo apt-get install php-fpm php-mysql 
 
 
+$ sudo mysql  <!-- this is the only way to enter mysql as root. -->
+
+
+mysql> CREATE DATABASE databaseName DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+mysql> CREATE USER 'databaseUserName'@'%' IDENTIFIED WITH mysql_native_password BY 'dbPassword';
+mysql> GRANT ALL ON Cleaningthelakedb.* TO 'Charly-CleanerLake'@'%';
+
+
+
+
 </body>
 </html>
