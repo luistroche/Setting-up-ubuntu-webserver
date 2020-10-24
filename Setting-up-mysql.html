@@ -64,10 +64,39 @@ Success.
 All done! 
   
 
-<!-- Installing php  -->
+<!-- Installing php packages and extentions -->
 
 $ sudo apt-get install php-fpm php-mysql 
 $ sudo apt install php-curl php-gd php-intl php-json php-mbstring php-soap php-xml php-xmlrpc php-zip 
+
+<!-- restart php service  -->
+~$ sudo systemctl restart php7.4-fpm.service 
+
+php7.4-fpm.service - The PHP 7.4 FastCGI Process Manager
+Loaded: loaded (/lib/systemd/system/php7.4-fpm.service; enabled; vendor preset: enabled)
+Active: active (running) since Fri 2020-10-23 14:20:30 EDT; 4min 8s ago
+  Docs: man:php-fpm7.4(8)
+Process: 5547 ExecStartPost=/usr/lib/php/php-fpm-socket-helper install /run/php/php-fpm.sock /etc/php/7.4/fpm/pool.d/www.conf 74 (code=exited, status=0/S>
+Main PID: 5534 (php-fpm7.4)
+Status: "Processes active: 0, idle: 2, Requests: 0, slow: 0, Traffic: 0req/sec"
+ Tasks: 3 (limit: 1074)
+Memory: 10.1M
+CGroup: /system.slice/php7.4-fpm.service
+        ├─5534 php-fpm: master process (/etc/php/7.4/fpm/php-fpm.conf)
+        ├─5545 php-fpm: pool www
+        └─5546 php-fpm: pool www
+
+Oct 23 14:20:30 personal-webserver systemd[1]: Starting The PHP 7.4 FastCGI Process Manager...
+Oct 23 14:20:30 personal-webserver systemd[1]: Started The PHP 7.4 FastCGI Process Manager.
+
+
+Ctrl + C to exit
+
+
+<!-- Check php-fpm status  -->
+
+$ sudo systemctl status php7.4-fpm.service
+
 
 
 $ sudo mysql  <!-- this is the only way to enter mysql as root. -->
