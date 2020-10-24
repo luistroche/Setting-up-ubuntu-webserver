@@ -94,6 +94,20 @@ $ sudo nano /etc/sshd_config
 
 - [X] Setting up firewall 
 
+
+Check ufw available services:
+
+```bash
+$ sudo ufw app list
+Available applications:
+  Nginx Full
+  Nginx HTTP
+  Nginx HTTPS
+  OpenSSH
+
+
+```
+
 ```bash
 $ sudo ufw default allow outgoing
 Default outgoing policy changed to 'allow'
@@ -108,15 +122,11 @@ Default incoming policy changed to 'deny'
 ```
 
 ```bash
-$ sudo ufw allow ssh
+$ sudo ufw allow 'OpenSSH'
 Rules updated
 Rules updated (v6)
 
-$ sudo ufw allow 80/tcp
-Rules updated
-Rules updated (v6)
-
-$ sudo ufw allow 443/tcp
+$ sudo ufw allow 'Nginx Full'
 Rules updated
 Rules updated (v6)
 
